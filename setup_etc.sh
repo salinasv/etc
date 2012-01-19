@@ -6,12 +6,12 @@ XDG_STRING="lua"
 # Check if the file exist to back it up.
 # Then create a symlink in the $HOME to this file.
 function link_file {
-	XDG=`grep ${XDG_STRING} ${FILE}`
+	XDG=`grep ${XDG_STRING} ${1}`
 	# TODO: Move this files to .${XDG_*}
 	# Skip XDG files for now.
 	if [[ -n ${XDG} ]]
 	then
-		echo "XDG FILE related file: ${FILE}"
+		echo "XDG FILE related file: ${1}"
 		continue
 	fi
 
