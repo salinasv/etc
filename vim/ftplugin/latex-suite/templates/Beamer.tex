@@ -1,0 +1,61 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+%      Author: Jorge Villaseñor
+
+\documentclass[hyperref={pdfpagelabels=false},xcolor=pst,pdf,fragile]{beamer}
+
+
+\providecommand\thispdfpagelabel[1]{}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+%Copenhagen, Warsaw
+\usetheme{Boadilla}
+\usefonttheme{serif}
+
+\def\Author{Jorge Villaseñor}
+\def\Matricula{784770}
+\def\Teacher{<++>}
+\def\Title{<++>}
+
+
+
+\title{\Title}
+\author{\Author\\ \Matricula}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\AtBeginSection[]
+{
+\begin{frame}
+	\frametitle{Outline}
+	\tableofcontents[currentsection]
+\end{frame}
+}
+
+\AtBeginSubsection[]
+{
+\begin{frame}
+	\frametitle{Outline}
+	\tableofcontents[currentsection,currentsubsection]
+\end{frame}
+}
+
+\begin{frame}
+	\frametitle{<+Title+>}
+
+	\begin{block}{<+Title+>} % alertblock, exampleblock
+		<++>
+	\end{block}
+
+	\alert{<+Alert+>}
+\end{frame}
+
+<++>
+\end{document}

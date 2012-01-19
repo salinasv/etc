@@ -1,0 +1,40 @@
+##REAL
+URxvt*background:black
+URxvt*foreground:#22FF22
+## PResentacion
+#URxvt*background:white
+#URxvt*foreground:grey
+
+URxvt*geometry: 83x70
+#URxvt*font: -*-Terminus-*-*-*-*-14-*-*-*-*-*-*-u
+#URxvt*font: -*-droid sans-medium-*-*-*-*-0-*-*-*-*-iso10646-1
+#URxvt*font: -*-Terminus-bold-*-*-*-14-*-*-*-*-*-*-u
+#URxvt*font: -misc-fixed-medium-r-semicondensed--15-140-75-75-c-68-iso10646-1
+#URxvt*font: -adobe-courier-medium-r-normal-*-*-100-*-*-*-90-iso8859-1
+URxvt*font: -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-1
+#URxvt*font: -misc-inconsolata-medium-r-normal--0-0-0-0-p-0-iso8859-1
+
+
+URxvt*transparent: true
+URxvt*tintColor: Black
+URxvt*shading: 10
+
+URxvt*termname: urxvt
+URxvt*urlLauncher: chromium
+URxvt*matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+#URxvt*urlLauncher: uzbl -u $0
+URxvt*matcher.button:  3
+#URxvt*matcher.launcher.1: /usr/local/bin/uzbl -u $0
+
+URxvt*urgentOnBell: true
+
+
+# XTerm
+#XTerm*background:black
+#XTerm*foreground:#22FF22
+#XTerm*geometry: 83x24
+#XTerm*font: -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-1
+
+#XTerm*transparent: true
+#XTerm*tintColor: Black
+#XTerm*shading: 10

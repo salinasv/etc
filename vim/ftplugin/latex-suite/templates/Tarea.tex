@@ -1,0 +1,39 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+%      Author: Jorge Villaseñor
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[top=2.5cm,right=2.5cm,bottom=2.5cm,left=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{apacite}
+
+\def\Author{Jorge Villaseñor}
+\def\Matricula{784770}
+\def\Teacher{<++>}
+\def\Title{<++>}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Fancy header
+\fancyhead{}
+\fancyhead[RO]{\Author\  \Matricula} 	% Right
+\fancyhead[CO]{\Title}	% Center
+\fancyhead[LO]{\Teacher} 	% Left
+%Fancy footer
+%\fancyfoot{}
+
+
+\title{\Title}
+\author{\Author\\ \Matricula}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+<++>
+\end{document}
