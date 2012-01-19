@@ -20,7 +20,7 @@ function link_file {
 	if [ -e "${HOME}/.${1}" ]; then
 		mv ${HOME}/.${1}{,_bkp}
 	fi
-	ln -s `pwd`${1} ../.${1}
+	ln -s `pwd`/${1} ../.${1}
 
 }
 
