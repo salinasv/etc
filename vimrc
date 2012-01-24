@@ -48,6 +48,10 @@ set number
 "*************************************************
 " Added by me
 "*************************************************
+"Pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 "Colorschemes
 set background=dark
 "" xterm16
