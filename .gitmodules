@@ -1,0 +1,3 @@
+[submodule "hacosta"]
+	path = hacosta
+	url = https://github.com/hacosta/configfiles.git
