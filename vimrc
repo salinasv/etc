@@ -143,6 +143,10 @@ if has("autocmd")
     \   exe "normal! g`\"" |
     \ endif
 
+  " VimOrganizer
+  au! BufRead,BufWrite,BufWritePost,BufNewFile *.org 
+  au BufEnter *.org            call org#SetOrgFileType()
+
   augroup END
 
 else
