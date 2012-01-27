@@ -30,11 +30,17 @@ URxvt*urgentOnBell: true
 
 
 # XTerm
-#XTerm*background:black
-#XTerm*foreground:#22FF22
-#XTerm*geometry: 83x24
-#XTerm*font: -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-1
+xterm*background:black
+xterm*foreground:#22FF22
+xterm*geometry: 83x70
+xterm*font: -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso8859-1
 
-#XTerm*transparent: true
-#XTerm*tintColor: Black
-#XTerm*shading: 10
+xterm*transparent: true
+xterm*tintColor: Black
+xterm*shading: 10
+
+xterm*urlLauncher: chromium
+xterm*matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+xterm*matcher.button:  3
+
+xterm*urgentOnBell: true
