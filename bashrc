@@ -69,6 +69,9 @@ alias svim='sudo vim'
 #Para usar vim como 'pager'
 alias vmore='vim -u ~/.vim.more -'
 
+# Important commands: Can save your live!
+alias isla='echo "Faltan $(( $(( $(date -d 2015-05-09 +%s) - $(date +%s) )) / 60 / 60 / 24 )) dias para la isla."'
+
 #ssh a linux y luego a bacanal
 alias ssh-bacanal='ssh -t jvillase@linux.mty.itesm.mx ssh salinasv@10.17.113.113'
 alias ssh-operativos='ssh -t jvillase@linux.mty.itesm.mx ssh salinasv@10.17.113.229'
