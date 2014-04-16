@@ -157,6 +157,33 @@ if has("autocmd")
 
   augroup END
 
+  "" Pidigin setup
+
+  autocmd! BufReadPost,BufNewFile */ChangeLog call <SID>ChangeLogNewsOptions()
+  autocmd! BufReadPost,BufNewFile */NEWS call <SID>ChangeLogNewsOptions()
+  autocmd! BufReadPost,BufNewFile */pidgin/* call <SID>PidginOptions()
+  autocmd! BufReadPost,BufNewFile */libpurple/* call <SID>PidginOptions()
+  autocmd! BufReadPost,BufNewFile */*.py call <SID>PythonOptions()
+
+  function! <SID>ChangeLogNewsOptions()
+      " These settings affect ChangeLog and NEWS files only
+      setlocal sw=8
+      setlocal tabstop=8
+  endfunction
+
+  function! <SID>PidginOptions()
+      " These settings affect ChangeLog and NEWS files only
+      setlocal sw=4
+      setlocal tabstop=4
+  endfunction
+
+  function! <SID>PythonOptions()
+      " These settings affect ChangeLog and NEWS files only
+      setlocal sw=4
+      setlocal tabstop=4
+      setlocal expandtab
+  endfunction
+
 else
 
   set autoindent		" always set autoindenting on
