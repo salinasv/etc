@@ -82,8 +82,16 @@ let g:tex_flavor= "latex"
 set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
 
 " Indentation
-set ts=4
-set sw=4
+set tabstop=4
+set shiftwidth=4
+"set expandtab	" Spaces instead of tabs
+
+" Show whitespaces red.
+highlight ExtraWhitespace ctermbg=red guibg=red
+au ColorScheme * highlight ExtraWhitespace guibg=red
+au BufEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 " Fold code, it looks nicer.
 set foldmethod=syntax
