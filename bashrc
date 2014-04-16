@@ -1,7 +1,11 @@
 ulimit -c unlimited
 
 if [ "$PS1" ]; then
-	fortune -ac
+  if which fortune &> /dev/null; then
+      echo
+      /usr/bin/fortune -ac
+      echo
+  fi
 fi
 
 #Autocompleta solo archivos (No se como jale)
