@@ -14,10 +14,6 @@ if v:progname =~? "evim"
   finish
 endif
 
-"Pathogen
-"call pathogen#runtime_append_all_bundles()
-call pathogen#infect()
-call pathogen#helptags()
 filetype off
 syntax on
 
@@ -55,9 +51,6 @@ set number
 "*************************************************
 " Added by me
 "*************************************************
-"Pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 
 "Colorschemes
 set background=dark
