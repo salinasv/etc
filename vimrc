@@ -118,6 +118,10 @@ inoremap <C-Y> <C-X><C-Y>
 "magia paste
 set pastetoggle=<f5>
 
+" executes .vimrc from working dir
+set exrc
+set secure " Don't alow shell or write commands to be executed from vimrc.
+
 "*************************************************
 
 " Only do this part when compiled with support for autocommands.
