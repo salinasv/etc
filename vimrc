@@ -122,6 +122,13 @@ set pastetoggle=<f5>
 set exrc
 set secure " Don't alow shell or write commands to be executed from vimrc.
 
+" YouCompleteMe mapping
+nnoremap <leader>gi :YcmCompleter GoToInclude<CR>
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoTo<CR>
+nnoremap <leader>gt :YcmCompleter GetType<CR>
+
 "*************************************************
 
 " Only do this part when compiled with support for autocommands.
@@ -193,10 +200,14 @@ call vundle#begin()
 
 " Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator' " Used to generate config files for .ycm and color_coded
+Plugin 'jeaye/color_coded'
+Plugin 'Shougo/denite.nvim'
 
 call vundle#end()
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 "command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-"	 	\ | wincmd! p | diffthis!
+"	 	\ | wincmd! p | diffthisc
