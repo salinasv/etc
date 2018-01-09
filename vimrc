@@ -122,6 +122,16 @@ set pastetoggle=<f5>
 set exrc
 set secure " Don't alow shell or write commands to be executed from vimrc.
 
+" Prefer python3
+set pyxversion=3
+if has('python3')
+elseif has(python)
+endif
+
+" YouCompleteMe configuration
+let g:ycm_python_binary_path = "/usr/local/bin/python3"
+let g:ycm_server_python_interpreter = "/usr/local/bin/python3"
+
 " YouCompleteMe mapping
 nnoremap <leader>gi :YcmCompleter GoToInclude<CR>
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
