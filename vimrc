@@ -136,6 +136,12 @@ nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoTo<CR>
 nnoremap <leader>gt :YcmCompleter GetType<CR>
 
+if has('osx')
+	" Fix dead keys on normal mode
+	" OSX US_Intl keyboard break ", just remap it to ""
+	nnoremap "" "
+endif
+
 "*************************************************
 
 " Only do this part when compiled with support for autocommands.
