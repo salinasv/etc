@@ -56,13 +56,6 @@ if has("gui_running")
 	set guifont=DejaVu\ Sans\ Mono:h12
 endif
 
-"Colorschemes
-set background=dark
-"" xterm16
-"let xterm16_colormap = 'standard'
-"let xterm16_brightness = 'default'
-"colorscheme xterm16
-colorscheme ron
 " Menu chingon
 set wildmenu
 
@@ -218,8 +211,16 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator' " Used to generate config files for .ycm and color_coded
 Plugin 'jeaye/color_coded'
 Plugin 'Shougo/denite.nvim'
+" Colorschemes
+Plugin 'flazz/vim-colorschemes'
+Plugin 'felixhummel/setcolors.vim'
 
 call vundle#end()
+
+"Colorschemes
+set background=dark
+"SetColors all
+colorscheme wombat256
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
