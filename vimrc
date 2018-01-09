@@ -51,6 +51,10 @@ set number
 "*************************************************
 " Added by me
 "*************************************************
+if has("gui_running")
+    "set guifont=Inconsolata\ Regular:h14
+	set guifont=DejaVu\ Sans\ Mono:h12
+endif
 
 "Colorschemes
 set background=dark
