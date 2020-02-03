@@ -223,6 +223,7 @@ Plugin 'rdnetto/YCM-Generator' " Used to generate config files for .ycm and colo
 Plugin 'roxma/nvim-yarp' "needed by denite
 Plugin 'roxma/vim-hug-neovim-rpc'  "needed by denite
 Plugin 'Shougo/denite.nvim'
+Plugin 'fatih/vim-go'
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'
 Plugin 'felixhummel/setcolors.vim'
@@ -257,6 +258,38 @@ noremap <silent><localleader>f :<C-u>Denite buffer file/rec<CR>
 	function! s:denite_filter_my_settings() abort
 	  imap <silent><buffer> <C-o> <Plug>(denite_filter_quit)
 	endfunction
+
+" vim-go setup
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_types = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_function_parameters = 1
+" Fix fmt folding all everytime the file is saved
+let g:go_fmt_experimental = 1
+let g:go_auto_type_info = 0
+"let g:go_updatetime=100 "enable if auto_type_info is enabled
+
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+autocmd FileType go nmap <leader>i <Plug>(go-info)
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+" GoAlternate + splits
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+" easier navigation through quicfix list. From vim-go tutorial
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+noremap <leader>a :cclose<CR>
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
