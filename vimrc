@@ -220,7 +220,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator' " Used to generate config files for .ycm and color_coded
-Plugin 'jeaye/color_coded'
+Plugin 'roxma/nvim-yarp' "needed by denite
+Plugin 'roxma/vim-hug-neovim-rpc'  "needed by denite
 Plugin 'Shougo/denite.nvim'
 " Colorschemes
 Plugin 'flazz/vim-colorschemes'
@@ -232,6 +233,30 @@ call vundle#end()
 set background=dark
 "SetColors all
 colorscheme wombat256
+
+"Denite
+noremap <silent><localleader>f :<C-u>Denite buffer file/rec<CR>
+	" Define mappings
+	autocmd FileType denite call s:denite_my_settings()
+	function! s:denite_my_settings() abort
+	  nnoremap <silent><buffer><expr> <CR>
+	  \ denite#do_map('do_action')
+	  nnoremap <silent><buffer><expr> d
+	  \ denite#do_map('do_action', 'delete')
+	  nnoremap <silent><buffer><expr> p
+	  \ denite#do_map('do_action', 'preview')
+	  nnoremap <silent><buffer><expr> q
+	  \ denite#do_map('quit')
+	  nnoremap <silent><buffer><expr> i
+	  \ denite#do_map('open_filter_buffer')
+	  nnoremap <silent><buffer><expr> <Space>
+	  \ denite#do_map('toggle_select').'j'
+	endfunction
+
+	autocmd FileType denite-filter call s:denite_filter_my_settings()
+	function! s:denite_filter_my_settings() abort
+	  imap <silent><buffer> <C-o> <Plug>(denite_filter_quit)
+	endfunction
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
