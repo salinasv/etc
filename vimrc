@@ -51,6 +51,10 @@ set number
 "*************************************************
 " Added by me
 "*************************************************
+
+" Just don't accept less than 256 colors
+set t_Co=256
+
 if has("gui_running")
     "set guifont=Inconsolata\ Regular:h14
 	set guifont=DejaVu\ Sans\ Mono:h12
