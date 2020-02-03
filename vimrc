@@ -212,11 +212,12 @@ else
 endif " has("autocmd")
 
 " Vundle config
-set rtp+=~/.vim/bundle/vundle
+set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
+
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator' " Used to generate config files for .ycm and color_coded
 Plugin 'jeaye/color_coded'
