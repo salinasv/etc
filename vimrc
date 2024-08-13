@@ -200,14 +200,6 @@ else
 
 endif " has("autocmd")
 
-" Vundle config
-"set runtimepath+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-
-" Let Vundle manage Vundle
-"Plugin 'VundleVim/Vundle.vim'
-"call vundle#end()
-
 " vim-plug plugin manager
 call plug#begin('~/.vim/bundle')
 
