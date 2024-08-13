@@ -204,6 +204,9 @@ endif " has("autocmd")
 call plug#begin('~/.vim/bundle')
 
 Plug 'fatih/vim-go'
+" Fuzzy finder
+Plug 'nvim-lua/plenary.nvim' "Needed by Telescope
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 Plug 'felixhummel/setcolors.vim'
@@ -215,6 +218,11 @@ set background=dark
 "SetColors all
 colorscheme wombat256
 
+"Telescope
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " vim-go setup
 let g:go_highlight_build_constraints = 1
