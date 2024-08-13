@@ -211,11 +211,11 @@ endif " has("autocmd")
 " vim-plug plugin manager
 call plug#begin('~/.vim/bundle')
 
-"Plug 'Valloric/YouCompleteMe'
-"Plug 'rdnetto/YCM-Generator' " Used to generate config files for .ycm and color_coded
-"Plug 'roxma/nvim-yarp' "needed by denite
-"Plug 'roxma/vim-hug-neovim-rpc'  "needed by denite
-"Plug 'Shougo/denite.nvim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'rdnetto/YCM-Generator' " Used to generate config files for .ycm and color_coded
+Plug 'roxma/nvim-yarp' "needed by denite
+Plug 'roxma/vim-hug-neovim-rpc'  "needed by denite
+Plug 'Shougo/denite.nvim'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 Plug 'felixhummel/setcolors.vim'
