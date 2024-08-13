@@ -201,23 +201,26 @@ else
 endif " has("autocmd")
 
 " Vundle config
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set runtimepath+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 
 " Let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
+"Plugin 'VundleVim/Vundle.vim'
+"call vundle#end()
 
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator' " Used to generate config files for .ycm and color_coded
-Plugin 'roxma/nvim-yarp' "needed by denite
-Plugin 'roxma/vim-hug-neovim-rpc'  "needed by denite
-Plugin 'Shougo/denite.nvim'
-Plugin 'fatih/vim-go'
+" vim-plug plugin manager
+call plug#begin('~/.vim/bundle')
+
+"Plug 'Valloric/YouCompleteMe'
+"Plug 'rdnetto/YCM-Generator' " Used to generate config files for .ycm and color_coded
+"Plug 'roxma/nvim-yarp' "needed by denite
+"Plug 'roxma/vim-hug-neovim-rpc'  "needed by denite
+"Plug 'Shougo/denite.nvim'
 " Colorschemes
-Plugin 'flazz/vim-colorschemes'
-Plugin 'felixhummel/setcolors.vim'
+Plug 'flazz/vim-colorschemes'
+Plug 'felixhummel/setcolors.vim'
 
-call vundle#end()
+call plug#end()
 
 "Colorschemes
 set background=dark
